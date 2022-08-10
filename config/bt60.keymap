@@ -51,14 +51,14 @@
 				// | RESET | BT_1 | BT_2 | BT_3 | BT_4 | BT_5 | 6 | 7 | 8 | 9 | 0 | -  | = | \ | BOOTLOADER |
 				// | BT_CLR  |  BT_PRV  |  BT_NXT  | E |  R  |  T  |  Y  |  U |  I |  O |  P | [ | ] | BSPC |
 				// | BL_TOG | BL_DEC | BL_INC |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ;  |  '  | ENTER |
-				// | SHIFT  | BT_CLR |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /  |  SHIFT  | MO(1) |
+				// | RGB_TOG     | Z |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  | /  |  SHIFT  | MO(1) |
 				// | MO(1) |  ALT  |  WIN  |           SPACE           |   WIN   |   ALT   |  MO(2)  | CTRL |
 				// ------------------------------------------------------------------------------------------
 			bindings = <
 				&reset &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans &trans &trans &bootloader 
 				&bt BT_CLR &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&bl BL_TOG &bl BL_DEC &bl BL_INC &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+				&rbg_ug RGB_TOG &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 				&trans &trans &trans &trans &trans &trans &trans &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
